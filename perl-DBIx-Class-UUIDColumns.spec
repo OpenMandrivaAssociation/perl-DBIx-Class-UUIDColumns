@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Create uuids using Win32API::GUID
 License:    GPL+ or Artistic
@@ -15,6 +15,7 @@ BuildRequires: perl(Class::Accessor::Grouped)
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBIx::Class)
 BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: perl(SQL::Abstract)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
