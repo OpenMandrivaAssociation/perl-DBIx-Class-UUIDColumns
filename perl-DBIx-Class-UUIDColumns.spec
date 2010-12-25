@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 4
 
 Summary:    Create uuids using Win32API::GUID
 License:    GPL+ or Artistic
@@ -13,6 +13,8 @@ Source0:    http://www.cpan.org/modules/by-module/DBIx/%{upstream_name}-%{upstre
 
 BuildRequires: perl(Class::Accessor::Grouped)
 BuildRequires: perl(Data::UUID)
+# Adding a requires or otherwise this module fails during run-time.
+Requires: perl(Data::UUID)
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBIx::Class)
 BuildRequires: perl(ExtUtils::MakeMaker)
