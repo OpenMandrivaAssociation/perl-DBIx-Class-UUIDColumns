@@ -1,19 +1,17 @@
 %define upstream_name    DBIx-Class-UUIDColumns
-%define upstream_version 0.02006
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Win32(.*)\\)'
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.02006
+Release:	2
 
 Summary:	Create uuids using Win32API::GUID
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=dbsrgits/DBIx-Class-UUIDColumns.git
-Source0:	https://cpan.metacpan.org/authors/id/A/AB/ABRAXXA/DBIx-Class-UUIDColumns-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AB/ABRAXXA/DBIx-Class-UUIDColumns-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -44,7 +42,7 @@ module from the following list of supported modules:
   Win32API::GUID
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
